@@ -17,9 +17,9 @@ class Experience(models.Model):
 
 class Project(models.Model):
     project_title = models.CharField(max_length=200)
-    discription = models.CharField(max_length=200)
-    start_date = models.DateTimeField(default=datetime.now)
-    end_date = models.DateTimeField(default=datetime.now)
+    description = models.CharField(max_length=200)
+    start_date = models.DateTimeField()
+    end_date = models.DateTimeField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
